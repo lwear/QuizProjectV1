@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS Quiz Assignment</title>
+	<script src="quizproject.js"></script>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="manifest" href="manifest.json">
+  
+</head>
+<body onLoad="loadQuestion()">
+
+<div id="lightbox" onclick="closeLightBox()">
+   <div id="message">Error. Something went wrong.</div>
+</div>
+
+
+<div class="title"> 
+	<h1>F&#8226;R&#8226;I&#8226;E&#8226;N&#8226;D&#8226;S:</h1>
+	<p>Score:&nbsp;<span id="score"></span></p>
+  </div> 
+  
+  <h2>The TV Show Series Quiz</h2> 
+
+<div class="grid-container">
+  <div class="header">
+    <div id="question">The Question</div>
+  </div>
+  
+  <div class="left">
+    <div>
+     <div class="options" id="a" onclick="markIt('a')">A.</div>
+	 <div class="options" id="b" onclick="markIt('b')">B.</div>
+     <div class="options" id="c" onclick="markIt('c')">C.</div>
+	 <div class="options" id="d" onclick="markIt('d')">D.</div>
+	</div>
+  </div> 
+
+  
+  <div class="right"> <img id="image" src="quizimages/q1.jpg" alt=""></div>
+  
+  <div class="footer1">
+    <p><span id="hint" onclick="showHint()">Hint</span>
+	</p>
+  </div>
+  
+  <div class="footer2">
+    <p>Time Left: <span id="countdown"></span>
+	</p>
+	<button class="button" type="submit" onclick="refreshPage()">
+    Restart Quiz
+    </button>
+  </div>
+</div>
+
+<!--Additonal Features: Hint Button, Timer, and Restart Quiz Buttton--> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=IM+Fell+English+SC&family=Kanit:wght@200&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Covered+By+Your+Grace&family=IM+Fell+English+SC&family=Kanit:wght@200&family=Lato&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+  background-color:white;
+}
+
+/* Style the header */
+
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+      'header' 
+      'left' 
+      'right' 
+      'footer1'
+	  'footer2';
+      
+}
+
+.title {
+	font-family: 'Covered By Your Grace', cursive; 
+}
+
+.title * {
+	display: inline-block; 
+	font-family: 'Covered By Your Grace', cursive;
+	font-weight: bold; 
+	font-size: 45px;
+}
+
+.title p {
+	float: right; 
+}
+
+.header {
+  grid-area: header;
+  background-color: #bca0dc;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Balsamiq Sans', cursive; 
+}
+  
+ 
+
+.left,
+.right,
+.header,
+.footer1, footer2 {
+  
+  display:grid;
+  justify-items:center;  
+  align-items:center;  
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color: #ffc300;
+    =font-family: 'Balsamiq Sans', cursive; 
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  background-color: #ffc300;
+}
+
+/* Style the footer */
+.footer1 {
+  grid-area: footer1;
+  background-color: #bca0dc;
+  padding: 0.5px;
+  text-align: center;
+  font-family: 'Covered By Your Grace', cursive; 
+  font-size: 35px; 
+}
+
+.footer2 {
+  grid-area: footer2;
+  background-color: #bca0dc;
+  padding: 0.5px;
+  text-align: center;
+  font-family: 'Covered By Your Grace', cursive; 
+  font-size: 35px; 
+}
+
+
+.footer2 * {
+	display: inline-block; 
+}
+
+#question {
+  font-size: 2em;
+  font-weight:bold;
+}
+
+
+.options {
+   font-size:1.5em;
+   padding:0.4em;
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.8);   
+}
+
+#message {
+    width:80%;
+    min-width:400px;
+    padding:20px;
+    background-color: #7c5295;
+    color:white;
+    text-align:center;
+    font-size:4em;
+    font-weight:bold;
+    /* vertically and horizontally center the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Balsamiq Sans', cursive;  transform: translate(-50%, -50%);
+}
+
+.button {
+	
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: 'Balsamiq Sans', cursive;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-left: 50%;
+  margin-bottom: 2%;
+}
+
+.button:hover {background-color: #ffc300;}
+
+.button:active {
+  background-color: #ffc300;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Desktop Version */
+@media (min-width: 768px) {
+	
+ .grid-container  {
+  grid-template-areas: 
+    'header header header header' 
+    'left left right right' 
+    'footer1 footer1 footer2 footer2';
+
+  
+  }
+}
